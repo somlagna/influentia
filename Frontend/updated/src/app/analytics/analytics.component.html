@@ -1,0 +1,71 @@
+<!-- <h1 text-center>Analytics</h1>
+<div>
+    <label for="year">Year:</label>
+    <input type="text" id="year" [(ngModel)]="year" placeholder="Enter your year">
+</div>
+
+<div>
+    <button (click)="goToYearlyAnalytics()">Go to YearlyAnalytics</button>
+
+</div> -->
+<!-- <div class="container mt-5">
+    <h1>Analytics Dashboard</h1>
+  
+    <div class="row mt-4">
+      <div class="col">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter username">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input type="number" class="form-control" id="year" [(ngModel)]="year" placeholder="Enter year">
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-3">
+      <div class="col">
+        <button class="btn btn-primary" (click)="goToYearlyAnalytics()">Yearly Analytics</button>
+         <button class="btn btn-primary" (click)="viewSemiAnnuallyAnalytics()">Semi-Annually Analytics</button>
+        <button class="btn btn-primary" (click)="viewMonthlyAnalytics()">Monthly Analytics</button> 
+      </div>
+    </div>
+  </div> -->
+  <div class="container mt-5 custom-container">
+    <h1 class="text-center mb-4">Analytics Dashboard</h1>
+    <div class="row mt-4">
+      <div class="col">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control custom-input" id="username" [(ngModel)]="username" disabled>
+          <div class="error-message" *ngIf="showErrorUserName">Username is required</div>
+        </div>
+      </div>
+    
+      <div class="col">
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input type="number" class="form-control custom-input" id="year" [(ngModel)]="year" placeholder="Enter year">
+          <div class="error-message" *ngIf="showErrorYear">Year is required</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-3">
+      <div class="col text-center">
+        <button class="btn btn-primary custom-button" (click)="goToYearlyAnalytics()">Yearly Analytics</button>
+      </div>
+    </div>
+  
+    <div class="row mt-3">
+      <div class="col text-center">
+        <button class="btn btn-secondary custom-button" (click)="goToMonthlyAnalytics()">Monthly Analytics</button>
+        <button class="btn btn-success custom-button" (click)="goToSemiAnnuallyAnalytics()">Semi-Annually Analytics</button>
+        <button class="btn btn-danger custom-button" (click)="goToQuarterlyAnalytics()">Quarterly Analytics</button>
+      </div>
+    </div>
+  
+<router-outlet></router-outlet>

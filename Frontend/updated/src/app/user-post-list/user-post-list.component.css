@@ -1,0 +1,78 @@
+
+/* .cards-container {
+    column-count: 2;
+  }
+  .cards-container div {
+     background: floralwhite;
+     -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  .cards-container div:first-child {
+      margin: 0;
+  }
+  .top-right-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .top-right-button:hover {
+    background-color: #45a049;
+  } */
+  /* .purple-card {
+    background-color: purple;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .cards-container .card {
+    border: none;
+  }
+  
+  .top-right-button {
+    float: right;
+  }
+  
+  @media (max-width: 767px) {
+    .cards-container .card {
+      flex-basis: 100%;
+    }
+  }
+   */
+   .purple-card {
+    background-color: purple;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .cards-container .card {
+    border: none;
+  }
+  
+  .top-right-button {
+    float: right;
+  }
+  
+  .post-content {
+    text-align: left;
+  }
+  
+  .custom-heading {
+    color: #8a2be2;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .top-right-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

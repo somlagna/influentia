@@ -1,0 +1,110 @@
+<div class="background-form vh-100 mt-0">
+    <div class="w-100 d-flex justify-content-center align-items-center mt-4 container pt-4">
+      <!-- <app-sidebar></app-sidebar> -->
+      <form #myForm="ngForm" (ngSubmit)="onChange(myForm.value)" class="lavender-form text-dark w-75 rounded-3 p-3">
+        <div class="attract-message">
+            <p class="message">Unleash your creativity and make an impact! Fill out the form below to create an extraordinary post that will captivate your audience. Share your thoughts, images, or videos with the world. Let your voice be heard and inspire others. Together, let's create moments that matter. Start crafting your masterpiece now!</p>
+        </div>
+        <div class="my-2 row">
+          <label for="postedon" class="form-label d-inline col-3">Posted On:</label>
+          <div class="col-9">
+            <input class="form-control" type="date" id="postedon" name="postedon" ngModel required>
+          </div>
+        </div>
+        <div class="my-2 row">
+          <label for="publishondate" class="form-label d-inline col-3">Publish On:</label>
+          <div class="col-9">
+            <input class="form-control" type="date" id="publishondate" name="publishondate" ngModel required>
+          </div>
+        </div>
+        <div class="my-2 row">
+          <label for="publishontime" class="form-label d-inline col-3">Publish on Time:</label>
+          <div class="col-9">
+            <input class="form-control" type="time" id="publishontime" name="publishontime" ngModel required>
+          </div>
+        </div>
+        <div class="my-2 row">
+          <label for="posttype" class="form-label d-inline col-3">Post Type:</label>
+          <div class="col-9">
+            <select class="form-select" id="posttype" name="posttype" (change)="onPostTypeChange($event)" ngModel required>
+              <option value="" disabled selected>Select Post Type</option>
+              <option value="Text">Text</option>
+              <option value="Image">Image</option>
+              <option value="Video">Video</option>
+            </select>
+          </div>
+        </div>
+        <div class="my-2 row d-flex justify-content-between" *ngIf="selectedPostType==='Text'">
+          <label class="form-label d-inline col-3">Text:</label>
+          <div class="col-9">
+            <textarea class="form-control" id="postcontexttext" name="postcontexttext" ngModel required></textarea>
+          </div>
+        </div>
+        <div class="my-2 row" *ngIf="selectedPostType==='Image'">
+          <label class="form-label d-inline col-3" for="image">Choose a File:</label>
+          <div class="col-9">
+            <input class="form-control" type="file" (change)="onFileSelected($event)" id="image" name="image"
+              accept="image/jpeg, image/png" ngModel required>
+          </div>
+        </div>
+        <div class="my-2 row" *ngIf="selectedPostType==='Video'">
+          <label class="form-label d-inline col-3" for="video">Choose a File:</label>
+          <div class="col-9">
+            <input class="form-control" type="file" (change)="onFileSelected($event)" id="video" name="video"
+              accept="video/*" ngModel required>
+          </div>
+        </div>
+        <div class="my-2 row">
+          <label class="form-label d-inline col-3" for="postattachmenturl">Post Attachment Url(if Any):</label>
+          <div class="col-9">
+            <input class="form-control" type="text" id="postattachmenturl" name="postattachmenturl" ngModel required>
+          </div>
+        </div>
+        <div class="my-2 row">
+          <label class="form-label d-inline col-3" for="poststatus">Post Status:</label>
+          <div class="col-9">
+            <select class="form-select" id="poststatus" name="poststatus" ngModel required>
+              <option value="" disabled selected>Select Post Status</option>
+              <option value="Scheduled">Scheduled</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </div>
+        </div>
+        <div class="my-2 row">
+          <label class="form-label d-inline col-3" for="userName">User Name:</label>
+          <div class="col-9">
+            <input class="form-control" type="text" id="userName" name="userName" ngModel required>
+          </div>
+        </div>
+        <div class="my-2 row">
+          <label class="form-label d-inline col-3" for="socialnetworktype">Social Network Type:</label>
+          <div class="col-9">
+            <select class="form-select" id="socialnetworktype" name="socialnetworktype" ngModel required>
+              <option value="" disabled selected>Select Social Network Type</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Twitter">Twitter</option>
+              <option value="Youtube">Youtube</option>
+              <option value="Linkedln">Linkedln</option>
+            </select>
+          </div>
+        </div>
+        <div class="my-2 row">
+          <label class="form-label d-inline col-3" for="isScheduled">Is Scheduled:</label>
+          <div class="col-9">
+            <select class="form-select" id="isScheduled" name="isScheduled" ngModel required>
+              <option value="" disabled selected>Select Is Scheduled</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-primary me-3" type="submit">Submit</button>
+          <button class="btn btn-primary" (click)="onNavigationBar()">Go to Navigation Bar</button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+  

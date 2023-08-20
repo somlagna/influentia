@@ -1,0 +1,33 @@
+<!-- navbar navbar-expand-lg navbar-light bg-dark -->
+
+<nav class="navbar navbar-expand-lg navbar-light beautiful-nav">
+    <div class="container-fluid d-flex justify-content-end">
+      <a class="navbar-brand text-white" href="/" >Content Module</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav d-flex ms-5">
+          <div class="hi-soma">
+            <p class="hi-soma-text">Hi, {{username}},plan={{plans}}</p>
+          </div>
+          <a class="nav-link text-light"  routerLink="Post" >Create Post</a>
+          <!-- <button class="list-button" (click)="openDialog()">List</button> -->
+          <a class="nav-link text-light"  routerLink="List">Postlist</a> 
+          <a class="nav-link text-light" routerLink="analytics" >Analytics</a>
+          <button type="button" class="btn btn-danger ml-4" (click)="logout()">Log Out</button>
+        </div>
+      </div>
+    </div>
+</nav>
+<!-- <app-post (usernameSubmitted)="navigateToUserPostList($event)" [visible]="dialogVisible"></app-post> -->
+<div class="image-container">
+  <img class="full-width-height" src="assets/images/clipart.jpg" alt="Image Description">
+  <div class="welcome-message">
+    <h1 class="welcome-title">Welcome</h1>
+    <p class="welcome-description">Discover the power of influence</p>
+    
+  </div>
+</div>
+<router-outlet></router-outlet>
+

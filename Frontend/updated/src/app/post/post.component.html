@@ -1,0 +1,11 @@
+<div class="dialog-container" *ngIf="visible">
+    <h2>Enter Username</h2>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" [(ngModel)]="username" placeholder="Enter username">
+      <div class="error-message" *ngIf="showError">Username is required</div>
+    </div>
+    <div class="form-group">
+      <button (click)="submitUsername()">Submit</button>
+    </div>
+  </div>

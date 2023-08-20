@@ -1,0 +1,30 @@
+.background-form {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.lavender-form {
+  background-color: #CDB0EE;
+  opacity: 0.9;
+}
+
+.component-container {
+  position: relative;
+}
+
+.full-width-height {
+  width: 100%;
+  height: auto;
+}
+.attract-message {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}

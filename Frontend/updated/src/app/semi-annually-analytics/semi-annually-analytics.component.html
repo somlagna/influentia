@@ -1,0 +1,51 @@
+<div class="container mt-5">
+    <h1 class="analytics-heading">Semi Annually Post Analytics</h1>
+    <div class="row mt-3">
+      <div class="col">
+        <input type="text" [(ngModel)]="socialAccountFilter" placeholder="Filter by Social Account">
+      </div>
+    </div>
+  
+    <!-- Add the second text box above the second column header -->
+    <div class="row mt-3">
+      <div class="col">
+        <input type="text" [(ngModel)]="postTypeFilter" placeholder="Filter by Post Type">
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <h5 class="analytics-label">User: {{username}}</h5>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <h5 class="analytics-label">Year: {{year}}</h5>
+      </div>
+    </div>
+    <div class="row mt-4" *ngIf="analyticsData.length === 0">
+      <div class="col">
+        <div class="alert alert-info">No posts available for the given username and year.</div>
+      </div>
+    </div>
+    <div class="row mt-4" *ngIf="analyticsData.length > 0">
+      <div class="col">
+        <table class="table table-striped analytics-table">
+          <thead>
+            <tr>
+              <th class="analytics-table-header">Social Account</th>
+              <th class="analytics-table-header">Post Type</th>
+              <th class="analytics-table-header">Post Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let analytics of analyticsData | filteranalyticspipe: socialAccountFilter: postTypeFilter">
+              <td class="analytics-table-data">{{analytics[1]}}</td>
+              <td class="analytics-table-data">{{analytics[0]}}</td>
+              <td class="analytics-table-data">{{analytics[2]}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

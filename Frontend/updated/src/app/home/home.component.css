@@ -1,0 +1,33 @@
+.lav-color{
+
+    background-color: #CDB0EE;
+
+    color: white !important;
+    
+    overflow: hidden;
+}
+
+a{
+
+    color: darkblue !important;
+
+}
+.navbar {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .image-container {
+    position: relative;
+    margin-top: 56px; /* Height of the navbar */
+    height: calc(100vh - 58px); /* Subtract the height of the navbar */
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
